@@ -28,7 +28,74 @@ Simplyify sending HTML emails
 Features
 --------
 
-* TODO
+The built in Python modules for sending email are powerful, but require a lot of
+boilerplate to write an HTML formatted email.
+
+.. code-block:: python
+
+        from email.mime.multipart import MIMEMultipart
+        from email.mime.text import MIMEText
+        import smtplib
+
+        message = MIMEMultipart('alternative')
+        message['Subject'] = 'Test'
+        message['From'] = 'user@gmail.com'
+        message['To'] = 'someone@else.com'
+
+        message.attach(MIMEText('# A Heading\nSomething else in the body', 'plain')
+        message.attach(MIMEText('<h1 style="color: blue">A Heading</a><p>Something else in the body</p>', 'html')
+
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login('user@gmail.com', 'password')
+        server.sendmail('user@gmail.com', 'someone@else.com', message.as_string())
+        server.quit()
+
+With ``email_to`` sending a simple email becomes much more succint.
+
+.. code-block:: python
+
+        import email_to
+        
+        server = email_to.EmailServer('smtp.gmail.com', 587, 'user@gmail.com', 'password')
+        server.quick_email('someone@else.com', 'Test',
+                           ['# A Heading', 'Something else in the body'],
+                           style='h1 {color: blue}')
+
+
+``email_to`` also supports building a message up, line by line. This is
+especially useful for monitoring scripts where there may be several different
+conditions of interest.
+
+.. code-block:: python
+
+        import email_to
+
+        server = email_to.EmailServer('smtp.gmail.com', 587, 'user@gmail.com', 'password')
+        
+        message = server.message()
+        message.add('# Oh boy, something went wrong!')
+        message.add('- The server had a hiccup')
+        message.add('- The power went out')
+        message.add('- Blame it on a rogue backhoe')
+        message.style = 'h1 { color: red}'
+        
+        message.send('someone@else.com', 'Things did not occur as expected')
+
+Additionally if the server details are not known at the beginning of the message,
+that can be handled easily too.
+
+.. code-block:: python
+
+        import email_to
+
+        message = email_to.Message('# Every thing is ok')
+        message.add('Everything has been running fine for days.')
+        message.add('Probably time to build something new and break everything')
+        message.style = 'h1 { color: green }'
+
+        server = email_to.EmailServer('smtp.gmail.com', 587, 'user@gmail.com', 'password')
+        server.send_message(message, 'someone@else.com', 'Things are awesome')
 
 Credits
 ---------
