@@ -34,7 +34,7 @@ Judgement rendered by:
    :target: https://landscape.io/github/abkfenris/email_to/master
    :alt: Code Health
 
-.. image:: https://codeclimate.com/github/abkfenris/email_to/badges/gpa.png
+.. image:: https://codeclimate.com/github/abkfenris/email_to/badges/gpa.svg
    :target: https://codeclimate.com/github/abkfenris/email_to
    :alt: Code Climate
 
