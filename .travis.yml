@@ -18,7 +18,7 @@ deploy:
       NlRpcnc3RlAxbXdxNjl0T2tnY0VybFlCRytKcFdtUUNaWFpManpWRWhLZ25jaHhmSjFUM3V2RUtH
       VUVKZUtZYUZtSUFCYlFwenp4UWZDNkRtbzRiM3BFNzNhSUhoVDNsOFRvZHBreHYrNWRXNDh5OVk9
   true:
-    python: 3.5
+    python: 3.6
     repo: abkfenris/email_to
     tags: true
 install: pip install -U tox-travis

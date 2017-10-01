@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """Top-level package for Email To."""
+from __future__ import absolute_import
 
 from email_to.email_to import EmailServer, Message
 

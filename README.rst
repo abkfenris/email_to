@@ -24,6 +24,23 @@ Simplyify sending HTML emails
 * Free software: MIT license
 * Documentation: https://email-to.readthedocs.io.
 
+Judgement rendered by:
+
+.. image:: https://api.codacy.com/project/badge/Grade/7dddc6b7000349958d485080f3dda7c1    
+        :target: https://www.codacy.com/app/abk/email_to?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=abkfenris/email_to&amp;utm_campaign=Badge_Grade
+        :alt: Codacy
+
+.. image:: https://landscape.io/github/abkfenris/email_to/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/abkfenris/email_to/master
+   :alt: Code Health
+
+.. image:: https://codeclimate.com/github/abkfenris/email_to/badges/gpa.svg
+   :target: https://codeclimate.com/github/abkfenris/email_to
+   :alt: Code Climate
+
+.. image:: https://scrutinizer-ci.com/g/abkfenris/email_to/badges/quality-score.png?b=master
+        :target: https://scrutinizer-ci.com/g/abkfenris/email_to/
+        :alt: scrutinizer
 
 Features
 --------

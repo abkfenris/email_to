@@ -14,17 +14,17 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     'markdown',
     'premailer'
-    # TODO: put package requirements here
+    # put package requirements here
 ]
 
 setup_requirements = [
     'pytest-runner',
-    # TODO(abkfenris): put setup requirements (distutils extensions, etc.) here
+    # put setup requirements (distutils extensions, etc.) here
 ]
 
 test_requirements = [
     'pytest',
-    # TODO: put package test requirements here
+    # put package test requirements here
 ]
 
 setup(
