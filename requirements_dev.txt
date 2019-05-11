@@ -1,6 +1,6 @@
 pip==8.1.2
 bumpversion==0.5.3
-wheel==0.29.0
+wheel==0.33.4
 watchdog==0.8.3
 # Sphinx==1.6.4
 cryptography==1.7
